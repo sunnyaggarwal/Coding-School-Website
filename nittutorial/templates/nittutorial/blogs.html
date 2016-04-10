@@ -1,0 +1,12 @@
+{% extends 'nittutorial/base.html' %}
+{% load staticfiles %}
+{% load mkrange %}
+{% block content %}
+{% for tut in tutorials %}
+<h1>{{ tut.title }}</h1>
+<p><pre>{{ tut.content }}</pre></p>
+<h4>{{ tut.complexity }}</h4>
+<h4>Rating is : {{ tut.rating }}</h4>
+<h4>Publish Date : {{ tut.publishedDate }}</h4>
+{% endfor %}
+{% endblock %}
